@@ -1,0 +1,5 @@
+mutation createPost($title:String!,$text:String!){
+  createPost(title:$title,text:$text){
+    title
+  }
+}

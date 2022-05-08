@@ -1,0 +1,17 @@
+query Posts($limit:Int!,$cursor:String){
+  getAll(limit:$limit,cursor:$cursor) {
+       hasMore
+    Posts{
+    _id
+      title
+      createdAt
+      textSnippet
+      voteStatus
+      points
+          creator{
+      _id
+      username
+    }
+    }
+  }
+}
